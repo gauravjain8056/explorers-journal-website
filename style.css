@@ -1,0 +1,275 @@
+/* Default styles for larger screens */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 1em 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .cta a {
+  background-color: #e44d26;
+  color: white;
+  padding: 0.7em 1.2em;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.hero-content {
+  padding-right: 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #e44d26;
+  color: white;
+  padding: 1em 2em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.featured-expeditions {
+  margin-bottom: 40px;
+}
+
+.expedition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.expedition-card {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.expedition-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.expedition-card h3 {
+  padding: 15px;
+  margin-top: 0;
+  color: #222;
+}
+
+.expedition-card p {
+  padding: 0 15px 15px;
+  color: #555;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.latest-discoveries {
+  margin-bottom: 40px;
+}
+
+.discovery-list {
+  display: grid;
+  gap: 20px;
+}
+
+.discovery-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.discovery-item h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.discovery-item small {
+  color: #777;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em; /* Reduce padding slightly */
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    flex-direction: column; /* Stack logo and text */
+    align-items: center;
+  }
+
+  .logo img {
+    width: 80px; /* Slightly smaller logo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: stretch; /* Full width navigation items */
+    gap: 5px; /* Reduce gap between nav items */
+    width: 100%; /* Make nav take full width */
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: block; /* Make links fill the list item */
+    padding: 0.7em 0;
+  }
+
+  nav .cta a {
+    padding: 0.7em 0; /* Adjust cta button padding */
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center; /* Center text content in hero */
+    padding: 20px; /* Add padding to hero section */
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+    display: flex; /* Enable flexbox for content alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .hero h2 {
+    font-size: 2em; /* Slightly reduce hero heading size */
+    margin-bottom: 15px;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 1em; /* Add vertical padding to the button */
+  }
+
+  .hero-image img {
+    margin-top: 20px; /* Add space between text and image */
+    width: 100%; /* Ensure image is responsive */
+    height: auto;
+  }
+
+  .featured-expeditions .expedition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjust section heading size */
+  }
+}
